@@ -6,10 +6,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CreateProjectComponent } from './create-project/create-project.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'dashboard', component: DashboardComponent},
+  { path: 'createproject', component: CreateProjectComponent},
   { path: '**', component: LoginComponent }
 ];
 
@@ -17,7 +19,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreateProjectComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
