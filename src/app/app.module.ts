@@ -21,7 +21,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'createproject', component: CreateProjectComponent},
-  { path: '**', component: LoginComponent }
+  { path: '**', component: DashboardComponent }
 ];
 
 @NgModule({
