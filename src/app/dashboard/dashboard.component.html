@@ -5,100 +5,40 @@
     </button>-->
   </div>
 
-  <!--<button class="btn btn-secondary float-right"  routerLink="/createproject" routerLinkActive="active">Example Button floated right</button>-->
-  <!--</div>-->
+  <h1>Project Details</h1>
 
-  <form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label">
+    <input class="mdl-textfield__input" type="text" id="sample1" [(ngModel)]="projectName" name="projectName"/>
+    <label class="mdl-textfield__label" for="sample1">Project Name</label>
+  </div>
 
-    <h1>Project Details</h1>
 
 
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="text" id="sample1" [(ngModel)]="projectName" name="projectName"/>
-      <label class="mdl-textfield__label" for="sample1">Project Name</label>
+
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label">
+    <input class="mdl-textfield__input" type="text" id="sample2" [(ngModel)]="projectLocation"
+           name="projectLocation"/>
+    <label class="mdl-textfield__label" for="sample2">Project location</label>
+  </div>
+
+
+
+  <h1>Project Expense</h1>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label" *ngFor="let item of inputFields; let i = index;">
+      <input class="mdl-textfield__input" type="number" [(ngModel)]="item.value" />
+      <label class="mdl-textfield__label" >{{item.name}}</label>
     </div>
 
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="text" id="sample2" [(ngModel)]="projectLocation"
-             name="projectLocation"/>
-      <label class="mdl-textfield__label" for="sample2">Project location</label>
-    </div>
+  <br>
 
 
-    <h1>Project Expense</h1>
 
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="number" id="sample3" [(ngModel)]="khudaie" name="khudaie"/>
-      <label class="mdl-textfield__label" for="sample3">Khudaie</label>
-    </div>
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="number" id="sample4" [(ngModel)]="generalLabour" name="generalLabour"/>
-      <label class="mdl-textfield__label" for="sample4">General Labour</label>
-    </div>
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="number" id="sample5" [(ngModel)]="stealContractPrice"
-             name="stealContractPrice"/>
-      <label class="mdl-textfield__label" for="sample5">Steal Contract Price</label>
-    </div>
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="number" id="sample6" [(ngModel)]="shatringContractPrice"
-             name="shatringContractPrice"/>
-      <label class="mdl-textfield__label" for="sample6">Shatring Contract Price</label>
-    </div>
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="number" id="sample7" [(ngModel)]="electricExpense"
-             name="electricExpense"/>
-      <label class="mdl-textfield__label" for="sample7">Electric Expense</label>
-    </div>
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="number" id="sample8" [(ngModel)]="mixCrushReti" name="mixCrushReti"/>
-      <label class="mdl-textfield__label" for="sample8">Mix Crush Reti</label>
-    </div>
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="number" id="sample9" [(ngModel)]="plumber" name="plumber"/>
-      <label class="mdl-textfield__label" for="sample9">Plumber</label>
-    </div>
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="number" id="sample10" [(ngModel)]="colourWork" name="colourWork"/>
-      <label class="mdl-textfield__label" for="sample10">Colour Work</label>
-    </div>
-
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="number" id="sample11" [(ngModel)]="blockMasonary" name="blockMasonary"/>
-      <label class="mdl-textfield__label" for="sample11">Block Masonary</label>
-    </div>
-
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="number" id="sample12" [(ngModel)]="plasterInternal"
-             name="plasterInternal"/>
-      <label class="mdl-textfield__label" for="sample1">Plaster Internal</label>
-    </div>
-
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="number" id="sample13" [(ngModel)]="plasterExternal"
-             name="plasterExternal"/>
-      <label class="mdl-textfield__label" for="sample1">Plaster External</label>
-    </div>
-
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="number" id="sample14" [(ngModel)]="tileWork" name="tileWork"/>
-      <label class="mdl-textfield__label" for="sample1">Tile work</label>
-    </div>
-
-
-  </form>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label">
+    <input class="mdl-textfield__input" type="text" [(ngModel)]="newInputField" />
+  </div>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" (click)="addInputField()" [disabled]="!newInputField">
+    <i class="material-icons">add</i>
+  </button>
 
   <h1>Report : Project Details</h1>
 
@@ -111,10 +51,13 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">{{projectName}}</td>
-        <td>{{projectLocation}}</td>
+
+
+      <tr *ngFor="let item of db_pull_projectsName; let i = index;">
+        <td (click)="projectDetails(i)" class="mdl-data-table__cell--non-numeric" >{{item.project_name}}</td>
+        <td (click)="projectDetails(i)">{{item.project_location}}</td>
       </tr>
+
       </tbody>
     </table>
   </div>
@@ -133,61 +76,9 @@
       </thead>
       <tbody>
 
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Khudaie</td>
-        <td>{{khudaie}}</td>
-      </tr>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">General Labour</td>
-        <td>{{generalLabour}}</td>
-      </tr>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Steal Contract Price</td>
-        <td>{{stealContractPrice}}</td>
-      </tr>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Shatring Contract Price</td>
-        <td>{{shatringContractPrice}}</td>
-      </tr>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Electric Expense</td>
-        <td>{{electricExpense}}</td>
-      </tr>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Mix Crush Reti</td>
-        <td>{{mixCrushReti}}</td>
-      </tr>
-
-
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Plumber</td>
-        <td>{{plumber}}</td>
-      </tr>
-
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric"> Colour Work</td>
-        <td>{{colourWork}}</td>
-      </tr>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric"> Block Masonary</td>
-        <td>{{blockMasonary}}</td>
-      </tr>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Plaster Internal</td>
-        <td>{{plasterInternal}}</td>
-      </tr>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Plaster External</td>
-        <td>{{plasterExternal}}</td>
-      </tr>
-
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Tile work</td>
-        <td>{{tileWork}}</td>
-      </tr>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Total</td>
-        <td>{{total}}</td>
+      <tr *ngFor="let item of copy_db_pull_projectsDetails; let i = index;">
+        <td class="mdl-data-table__cell--non-numeric">{{item.name}}</td>
+        <td>{{item.value}}</td>
       </tr>
 
       </tbody>
@@ -202,18 +93,13 @@
   <h1>TOTAL EXPENSE ON PROJECT = {{total}}</h1>
 
   <br/>
-  <!--<button
-    class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect mdl-button&#45;&#45;accent mr-auto p-2"
-    [disabled]="!tileWork || !plasterExternal || !plasterInternal || !blockMasonary || !colourWork || !plumber || !mixCrushReti
-                 || !electricExpense || !shatringContractPrice || !generalLabour  || !khudaie || !stealContractPrice || !total"
-    (click)="saveProjectToDatabase()">Save Project To DataBase
-  </button>-->
+  <button
+    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mr-auto p-2"
+    (click)="saveProjectToDatabase()" [disabled]="!projectName || !projectLocation">Save Project To DataBase
+  </button>
+  <!--[disabled]="!tileWork || !plasterExternal || !plasterInternal || !blockMasonary || !colourWork || !plumber || !mixCrushReti
+  || !electricExpense || !shatringContractPrice || !generalLabour  || !khudaie || !stealContractPrice || !total"-->
 
-  <button id="demo-show-toast" class="mdl-button mdl-js-button mdl-button--raised" type="button">Show Toast</button>
-  <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
-    <div class="mdl-snackbar__text"></div>
-    <button class="mdl-snackbar__action" type="button"></button>
-  </div>
 
   <br/><br/><br/>
 
